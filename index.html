@@ -1,0 +1,76 @@
+<!-- Estrutura básica do documento HTML -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Cabeçalho com metadados e links de estilo -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pobreflix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<!-- Corpo da página com cabeçalho e conteúdo principal -->
+<body>
+    <!-- Cabeçalho do site com título/logo -->
+    <header>
+        <h1>POBREFLIX</h1>
+        <!-- Botão para alternar tema (dark/light) -->
+        <button id="theme-toggle" type="button" aria-label="Alternar tema">🌙</button>
+    </header>
+    <!-- Área principal do conteúdo -->
+    <main>
+        <!-- Título da página -->
+        <h2>Quem está assistindo?</h2>
+        <!-- Subtítulo -->
+        <h3>Perfis</h3>
+        <!-- Seção de seleção de perfis -->
+        <section class="profiles" aria-label="Seleção de perfil">
+            <!-- Lista não ordenada para container de perfis -->
+            <ul class="profile-list">
+                <li class="profile-item">
+                    <!-- Lista ordenada para ordenação semântica dos perfis -->
+                    <ol class="profile-ordered-list">
+                        <!-- Item de perfil individual -->
+                        <li>
+                            <button class="profile-btn" type="button">
+                                <figure>
+                                    <img src="/assets/perfil 1.png" alt="Perfil Gaga" width="150" height="150" loading="lazy">
+                                    <figcaption>Gaga</figcaption>
+                                </figure>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="profile-btn" type="button">
+                                <figure>
+                                    <img src="/assets/perfil 2.png" alt="Perfil Myne" width="150" height="150" loading="lazy">
+                                    <figcaption>Myne</figcaption>
+                                </figure>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="profile-btn" type="button">
+                                <figure>
+                                    <img src="/assets/perfil 3.png" alt="Perfil Magic" width="150" height="150" loading="lazy">
+                                    <figcaption>Magic</figcaption>
+                                </figure>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="profile-btn create" type="button">
+                                <figure>
+                                    <img src="/assets/adicionar perfil.png" alt="Adicionar perfil" width="150" height="150" loading="lazy">
+                                    <figcaption>Adicionar perfil</figcaption>
+                                </figure>
+                            </button>
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+            <!-- Seção de gerenciamento de perfis -->
+            <div class="profile-management">
+                <button type="button">Gerenciar perfis</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,341 @@
+/* Estilos globais do corpo da página */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos do cabeçalho */
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #f3d320;
+}
+
+/* Botão de toggle de tema */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #f3d320;
+    transition: color 0.2s;
+}
+
+#theme-toggle:hover {
+    color: #fff;
+}
+
+/* Tema claro */
+.light {
+    background-color: #fff;
+    color: #000;
+}
+
+.light main,
+.light section,
+.light .profile-list,
+.light .profile-ordered-list {
+    background-color: transparent;
+}
+
+.light header h1 {
+    color: #ffe600;
+}
+
+.light #theme-toggle {
+    color: #000;
+}
+
+.light #theme-toggle:hover {
+    color: #333;
+}
+
+.light .profile-management button {
+    background-color: #ffe600;
+    color: #000;
+}
+
+.light .profile-management button:hover {
+    background-color: #ffae00;
+}
+
+.light .Edit button {
+    background-color: #333;
+    color: #fff;
+}
+
+.light .Edit button:hover {
+    background-color: #555;
+}
+
+/* Estilos da área principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 90px;
+}
+
+/* Estilos dos títulos */
+h2 {
+    font-size: 2rem;
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+/* Estilos da seção de perfis */
+.profiles {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Estilos da lista dnão ordenada de perfis */
+.profile-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Estilos da lista ordenada dentro da lista de perfis */
+.profile-ordered-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Estilos dos botões de perfil */
+.profile-btn {
+    width: 150px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    text-align: center;
+}
+
+.profile-btn figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-btn figcaption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.profile-btn:hover img {
+    border-color: #fff;
+}
+
+.profile-btn img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.profile-btn:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilos da seção de gerenciamento de perfis */
+.profile-management {
+    margin-top: 24px;
+}
+
+.profile-management button {
+    background-color: #f3d320;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.profile-management button:hover {
+    background-color: #ffae00;
+}
+
+/* Estilos da seção de edição (se existir) */
+.Edit {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.Edit button {
+    background-color: #ffe600;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Responsividade para diferentes tamanhos de tela */
+
+/* Media query para tablet e desktop pequeno */
+@media (max-width: 1024px) {
+    header {
+        position: static;
+        margin: 16px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        margin-top: 30px;
+        padding: 16px;
+        max-width: 960px;
+    }
+
+    .profile-btn,
+    .profile-btn img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .profile-btn figcaption {
+        font-size: 1.1rem;
+    }
+}
+
+/* Media query para tablet e phablet */
+@media (max-width: 768px) {
+    body {
+        align-items: stretch;
+    }
+
+    main {
+        margin-top: 20px;
+        padding: 14px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .profile-list {
+        gap: 12px;
+    }
+
+    .profile-btn,
+    .profile-btn img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .profile-management button,
+    .Edit button {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 480px) {
+    body {
+        padding: 8px 0;
+    }
+
+    header {
+        margin: 8px;
+    }
+    main {
+        margin-top: 20px;
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin: 16px 0 8px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        margin: 8px 0 16px;
+    }
+
+    .profile-ordered-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+        justify-items: center;
+    }
+
+    .profile-btn {
+        width: auto;
+    }
+
+    .profile-btn img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-btn figcaption {
+        margin-top: 8px;
+        font-size: 0.9rem;
+    }
+
+    .profile-management button,
+    .Edit button {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
